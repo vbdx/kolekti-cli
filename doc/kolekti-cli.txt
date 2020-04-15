@@ -68,17 +68,21 @@ Les arguments les plus frequemment utilisés peuvent être spéficiés dans un f
 * /etc/kolekti.ini [linux]
 
 Le fichier de configuration utilise la syntaxe des fichiers ini.
-Chaque section (nom entre [] ) correspond à une comment et contient les couples nom : valeur des arguments, un argument par ligne.
+Chaque section (nom entre [] ) correspond à une commande (publish, make_release, etc.) et contient les couples nom = valeur des arguments, un argument par ligne.
 
-Par exemple, il peut être utile de spécifier l'adresse du projet une fois pour toute dans le fichier ini.  Dans ce cas, le fichier ini contiendra :
+La section qui regroupe les réglages est [InstallSettings]
 
-[emplacement du projet]
-BASE=/path/to/project/
+Exemples
 
-De la même manière, si les documents sont toujours publiés en français, le fichier ini pourra contenir :
+Pour spécifier l'adresse du projet une fois pour toute dans le fichier ini :
 
-[langue de publication par défaut]
-LANG=fr
+[InstallSettings]
+base=/path/to/project/
+
+Si les documents sont toujours publiés en français, le fichier ini pourra contenir :
+
+[publish]
+languages=fr
 
 Détail des paramètres des commandes
 ***********************************
