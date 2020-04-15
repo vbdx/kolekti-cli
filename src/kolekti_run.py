@@ -73,7 +73,7 @@ def main():
     parser_draft = subparsers.add_parser('publish', help="assemble, filter and produce documents")
     parser_draft.add_argument('toc', action='store', help="Toc to be published")
     parser_draft.add_argument('-j', '--job', action='store', help="Job to be used, overrides the job associated with the toc")
-    parser_draft.add_argument('-l', '--languages', required=True, action='store', help="comma-separated list of languages to publish")
+    parser_draft.add_argument('-l', '--languages', action='store', help="comma-separated list of languages to publish")
     parser_draft.add_argument('--nocleanup', action='store_true', help="do not remove temporary files after publication")
     defaults=config.get("publish",{})
     defaults.update({'cmd':'publish'})
